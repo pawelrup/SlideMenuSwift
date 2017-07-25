@@ -1,0 +1,16 @@
+PODS:
+  - SlideMenuSwift (0.1.0)
+
+DEPENDENCIES:
+  - SlideMenuSwift (from `../`)
+
+EXTERNAL SOURCES:
+  SlideMenuSwift:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SlideMenuSwift: dbe6a2aab4110dd564d4156c22f8e4191be695be
+
+PODFILE CHECKSUM: 954a7009cd909fcab217b10c8400c7a5dc501c31
+
+COCOAPODS: 1.2.1

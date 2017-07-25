@@ -1,0 +1,6 @@
+framework module SlideMenuSwift {
+  umbrella header "SlideMenuSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

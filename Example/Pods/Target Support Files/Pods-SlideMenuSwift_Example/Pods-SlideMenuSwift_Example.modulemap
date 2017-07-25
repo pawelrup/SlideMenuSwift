@@ -1,0 +1,6 @@
+framework module Pods_SlideMenuSwift_Example {
+  umbrella header "Pods-SlideMenuSwift_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
