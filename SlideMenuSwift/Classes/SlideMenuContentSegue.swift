@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class SlideMenuContentSegue: UIStoryboardSegue {
+open class SlideMenuContentSegue: UIStoryboardSegue {
 
-    override public func perform() {
+    override open func perform() {
         let sourceVC = self.source as! UITableViewController
         let destinationNVC = self.destination as! UINavigationController
         

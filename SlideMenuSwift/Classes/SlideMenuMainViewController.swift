@@ -40,7 +40,7 @@ public enum SlidePanningState {
     @objc optional func navigationControllerInRightMenu(for indexPath: IndexPath) -> UINavigationController
 }
 
-public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboarding {
+open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboarding {
     
     private static var allInstances: [NSValue] = []
     
@@ -74,9 +74,9 @@ public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleSto
     private var leftSegue: SlideMenuLeftMenuSegue?
     private var rightSegue: SlideMenuRightMenuSegue?
     
-    internal (set) var leftMenu: SlideMenuLeftTableViewController?
-    internal (set) var rightMenu: SlideMenuRightTableViewController?
-    internal (set) var currentActiveNVC: UINavigationController?
+    public internal (set) var leftMenu: SlideMenuLeftTableViewController?
+    public internal (set) var rightMenu: SlideMenuRightTableViewController?
+    public internal (set) var currentActiveNVC: UINavigationController?
     
     internal private (set) var isInitialStart: Bool = true
     internal (set) var leftPanDisabled: Bool = false
@@ -86,7 +86,7 @@ public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleSto
     
     // MARK: - Lifecycle
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         SlideMenuMainViewController.allInstances.append(NSValue(nonretainedObject: self))
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterfaceOrientationChangedNotification(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -94,7 +94,7 @@ public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleSto
         self.setup()
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let leftMenu = self.leftMenu, self.deepnessForLeftMenu {
             leftMenu.view.layer.transform = kMenuTransformScale
@@ -137,7 +137,7 @@ public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleSto
         }
     }
     
-    override public func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+    override open func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         if let currentActiveNVC = self.currentActiveNVC, currentActiveNVC.shouldAutorotate {
             currentActiveNVC.view.layer.shadowOpacity = 0
         }
