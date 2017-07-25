@@ -168,87 +168,87 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
     
     // MARK: - Datasource
     
-    public var leftMenuWidth: CGFloat {
+    open var leftMenuWidth: CGFloat {
         return 250
     }
     
-    public var rightMenuWidth: CGFloat {
+    open var rightMenuWidth: CGFloat {
         return 250
     }
     
-    public var openAnimationDuration: TimeInterval {
+    open var openAnimationDuration: TimeInterval {
         return 0.25
     }
     
-    public var closeAnimationDuration: TimeInterval {
+    open var closeAnimationDuration: TimeInterval {
         return 0.25
     }
     
-    public var openAnimationOptions: UIViewAnimationOptions {
+    open var openAnimationOptions: UIViewAnimationOptions {
         return .curveLinear
     }
     
-    public var closeAnimationOptions: UIViewAnimationOptions {
+    open var closeAnimationOptions: UIViewAnimationOptions {
         return .curveLinear
     }
     
-    public var primaryMenu: PrimaryMenu {
+    open var primaryMenu: PrimaryMenu {
         return .left
     }
     
-    public var initialIndexPathForLeftMenu: IndexPath {
+    open var initialIndexPathForLeftMenu: IndexPath {
         return IndexPath(row: 0, section: 0)
     }
     
-    public var initialIndexPathForRightMenu: IndexPath {
+    open var initialIndexPathForRightMenu: IndexPath {
         return IndexPath(row: 0, section: 0)
     }
     
-    public func segueIdentifierInLeftMenu(forIndexPath indexPath: IndexPath) -> String? {
+    open func segueIdentifierInLeftMenu(forIndexPath indexPath: IndexPath) -> String? {
         return ""
     }
     
-    public func segueIdentifierInRightMenu(forIndexPath indexPath: IndexPath) -> String? {
+    open func segueIdentifierInRightMenu(forIndexPath indexPath: IndexPath) -> String? {
         return ""
     }
     
-    public var panGestureWarkingAreaPercent: CGFloat {
+    open var panGestureWarkingAreaPercent: CGFloat {
         return 100
     }
     
-    public var deepnessForLeftMenu: Bool {
+    open var deepnessForLeftMenu: Bool {
         return false
     }
     
-    public var deepnessForRightMenu: Bool {
+    open var deepnessForRightMenu: Bool {
         return false
     }
     
-    public var maxDarknessWhileLeftMenu: CGFloat {
+    open var maxDarknessWhileLeftMenu: CGFloat {
         return 0
     }
     
-    public var maxDarknessWhileRightMenu: CGFloat {
+    open var maxDarknessWhileRightMenu: CGFloat {
         return 0
     }
     
-    public var segueIdentifierForLeftMenu: String {
+    open var segueIdentifierForLeftMenu: String {
         return ""
     }
     
-    public var segueIdentifierForRightMenu: String {
+    open var segueIdentifierForRightMenu: String {
         return ""
     }
     
-    public func configureLeftMenuButton() -> UIButton? {
+    open func configureLeftMenuButton() -> UIButton? {
         return nil
     }
     
-    public func configureRightMenuButton() -> UIButton? {
+    open func configureRightMenuButton() -> UIButton? {
         return nil
     }
     
-    public func configure(slideLayer layer: CALayer) {
+    open func configure(slideLayer layer: CALayer) {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOpacity = 1
         layer.shadowOffset = .zero
