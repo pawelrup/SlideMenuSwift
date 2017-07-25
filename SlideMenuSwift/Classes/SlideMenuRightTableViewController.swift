@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SlideMenuRightTableViewController: UITableViewController {
+public class SlideMenuRightTableViewController: UITableViewController {
     
-    var mainVC: SlideMenuMainViewController!
+    public var mainVC: SlideMenuMainViewController!
     
-    func open(contentNavigationController navigationController: UINavigationController) {
+    public func open(contentNavigationController navigationController: UINavigationController) {
         #if SlideMenuWithoutStoryboards
             NSLog("This methos is only for NON storyboard use! You must define SlideMenuWithoutStoryboards in other swift flags")
         #else
@@ -23,7 +23,7 @@ class SlideMenuRightTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let navigationController = (self.mainVC as SlideMenuMultipleStoryboarding).navigationControllerInRightMenu?(for: indexPath) {
             let segue = SlideMenuContentSegue(identifier: "ContentSugue", source: self, destination: navigationController)
             segue.perform()

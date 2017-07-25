@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SlideMenuRightMenuSegue: UIStoryboardSegue {
+public class SlideMenuRightMenuSegue: UIStoryboardSegue {
 
-    override func perform() {
+    override public func perform() {
         let mainVC = self.source as! SlideMenuMainViewController
         let rightMenu = self.destination as! SlideMenuRightTableViewController
         

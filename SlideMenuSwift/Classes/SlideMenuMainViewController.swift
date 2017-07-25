@@ -7,39 +7,40 @@
 //
 
 import UIKit
+
 private let kPanMinTranslationX: CGFloat = 15
 private let kMenuTransformScale = CATransform3DMakeScale(0.9, 0.9, 0.9)
 private let kMenuLayerInitialOpacity: Float = 0.4
 private let kAutoresizingMaskAll: UIViewAutoresizing = [.flexibleWidth, .flexibleHeight, .flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
 
-enum PrimaryMenu {
+public enum PrimaryMenu {
     case left
     case right
 }
 
-enum SlideMenu {
+public enum SlideMenu {
     case left
     case right
 }
 
-enum SlideMenuState {
+public enum SlideMenuState {
     case closed
     case leftOpened
     case rightOpened
 }
 
-enum SlidePanningState {
+public enum SlidePanningState {
     case stopped
     case left
     case right
 }
 
-@objc protocol SlideMenuMultipleStoryboarding: class {
+@objc public protocol SlideMenuMultipleStoryboarding: class {
     @objc optional func navigationControllerInLeftMenu(for indexPath: IndexPath) -> UINavigationController
     @objc optional func navigationControllerInRightMenu(for indexPath: IndexPath) -> UINavigationController
 }
 
-class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboarding {
+public class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboarding {
     
     private static var allInstances: [NSValue] = []
     
@@ -85,7 +86,7 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
     
     // MARK: - Lifecycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         SlideMenuMainViewController.allInstances.append(NSValue(nonretainedObject: self))
         NotificationCenter.default.addObserver(self, selector: #selector(handleInterfaceOrientationChangedNotification(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -93,7 +94,7 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
         self.setup()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let leftMenu = self.leftMenu, self.deepnessForLeftMenu {
             leftMenu.view.layer.transform = kMenuTransformScale
@@ -136,7 +137,7 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
         }
     }
     
-    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+    override public func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         if let currentActiveNVC = self.currentActiveNVC, currentActiveNVC.shouldAutorotate {
             currentActiveNVC.view.layer.shadowOpacity = 0
         }
@@ -153,7 +154,7 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
     
     // MARK: - Static methods
     
-    static func getInstance(for viewController: UIViewController) -> SlideMenuMainViewController? {
+    public static func getInstance(for viewController: UIViewController) -> SlideMenuMainViewController? {
         if SlideMenuMainViewController.allInstances.count == 1 {
             return SlideMenuMainViewController.allInstances.first?.nonretainedObjectValue as? SlideMenuMainViewController
         }
@@ -167,87 +168,87 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
     
     // MARK: - Datasource
     
-    var leftMenuWidth: CGFloat {
+    public var leftMenuWidth: CGFloat {
         return 250
     }
     
-    var rightMenuWidth: CGFloat {
+    public var rightMenuWidth: CGFloat {
         return 250
     }
     
-    var openAnimationDuration: TimeInterval {
+    public var openAnimationDuration: TimeInterval {
         return 0.25
     }
     
-    var closeAnimationDuration: TimeInterval {
+    public var closeAnimationDuration: TimeInterval {
         return 0.25
     }
     
-    var openAnimationOptions: UIViewAnimationOptions {
+    public var openAnimationOptions: UIViewAnimationOptions {
         return .curveLinear
     }
     
-    var closeAnimationOptions: UIViewAnimationOptions {
+    public var closeAnimationOptions: UIViewAnimationOptions {
         return .curveLinear
     }
     
-    var primaryMenu: PrimaryMenu {
+    public var primaryMenu: PrimaryMenu {
         return .left
     }
     
-    var initialIndexPathForLeftMenu: IndexPath {
+    public var initialIndexPathForLeftMenu: IndexPath {
         return IndexPath(row: 0, section: 0)
     }
     
-    var initialIndexPathForRightMenu: IndexPath {
+    public var initialIndexPathForRightMenu: IndexPath {
         return IndexPath(row: 0, section: 0)
     }
     
-    func segueIdentifierInLeftMenu(forIndexPath indexPath: IndexPath) -> String? {
+    public func segueIdentifierInLeftMenu(forIndexPath indexPath: IndexPath) -> String? {
         return ""
     }
     
-    func segueIdentifierInRightMenu(forIndexPath indexPath: IndexPath) -> String? {
+    public func segueIdentifierInRightMenu(forIndexPath indexPath: IndexPath) -> String? {
         return ""
     }
     
-    var panGestureWarkingAreaPercent: CGFloat {
+    public var panGestureWarkingAreaPercent: CGFloat {
         return 100
     }
     
-    var deepnessForLeftMenu: Bool {
+    public var deepnessForLeftMenu: Bool {
         return false
     }
     
-    var deepnessForRightMenu: Bool {
+    public var deepnessForRightMenu: Bool {
         return false
     }
     
-    var maxDarknessWhileLeftMenu: CGFloat {
+    public var maxDarknessWhileLeftMenu: CGFloat {
         return 0
     }
     
-    var maxDarknessWhileRightMenu: CGFloat {
+    public var maxDarknessWhileRightMenu: CGFloat {
         return 0
     }
     
-    var segueIdentifierForLeftMenu: String {
+    public var segueIdentifierForLeftMenu: String {
         return ""
     }
     
-    var segueIdentifierForRightMenu: String {
+    public var segueIdentifierForRightMenu: String {
         return ""
     }
     
-    func configureLeftMenuButton() -> UIButton? {
+    public func configureLeftMenuButton() -> UIButton? {
         return nil
     }
     
-    func configureRightMenuButton() -> UIButton? {
+    public func configureRightMenuButton() -> UIButton? {
         return nil
     }
     
-    func configure(slideLayer layer: CALayer) {
+    public func configure(slideLayer layer: CALayer) {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOpacity = 1
         layer.shadowOffset = .zero
@@ -834,14 +835,14 @@ class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStoryboard
 
 // MARK: - UIGestureRecognizerDelegate
 extension SlideMenuMainViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if let view = touch.view, view.isKind(of: UISlider.self) {
             return false
         }
         return true
     }
     
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let velocity = self.panGesture.velocity(in: self.panGesture.view)
         let isHorizontalGesture = fabs(velocity.y) < fabs(velocity.x)
         
@@ -857,7 +858,7 @@ extension SlideMenuMainViewController: UIGestureRecognizerDelegate {
         return isHorizontalGesture
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         let velocity = self.panGesture.velocity(in: self.panGesture.view)
         let isHorizontalGesture = fabs(velocity.y) < fabs(velocity.x)
         

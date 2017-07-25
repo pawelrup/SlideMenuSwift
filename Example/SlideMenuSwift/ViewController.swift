@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuSwift
 
 class ViewController: UIViewController {
 

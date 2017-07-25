@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SlideMenuDelegate: class {
+public protocol SlideMenuDelegate: class {
     func leftMenuWillOpen()
     func leftMenuDidOpen()
     func rightMenuWillOpen()

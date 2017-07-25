@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    var mainSlideMenu: SlideMenuMainViewController? {
+    public var mainSlideMenu: SlideMenuMainViewController? {
         return SlideMenuMainViewController.getInstance(for: self)
     }
     
@@ -31,7 +31,7 @@ extension UIViewController {
     
     // MARK: -
     
-    func addLeftMenuButton() {
+    public func addLeftMenuButton() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         let navItem = self.navigationItem
         let leftBtn = mainVC?.configureLeftMenuButton() ?? UIButton(type: .custom) //TODO: Animated hamburger button as default
@@ -39,7 +39,7 @@ extension UIViewController {
         navItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
     }
     
-    func addRightMenuButton() {
+    public func addRightMenuButton() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         let navItem = self.navigationItem
         let rightBtn = mainVC?.configureRightMenuButton() ?? UIButton(type: .custom) //TODO: Animated hamburger button as default
@@ -47,37 +47,37 @@ extension UIViewController {
         navItem.leftBarButtonItem = UIBarButtonItem(customView: rightBtn)
     }
     
-    func removeLeftMenuButton() {
+    public func removeLeftMenuButton() {
         let navItem = self.navigationItem
         navItem.leftBarButtonItem = nil
     }
     
-    func removeRightMenuButton() {
+    public func removeRightMenuButton() {
         let navItem = self.navigationItem
         navItem.rightBarButtonItem = nil
     }
     
-    func enableSlidePanGestureForLeftMenu() {
+    public func enableSlidePanGestureForLeftMenu() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.rightPanDisabled = false
     }
     
-    func enableSlidePanGestureForRightMenu() {
+    public func enableSlidePanGestureForRightMenu() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.leftPanDisabled = false
     }
     
-    func disableSlidePanGestureForLeftMenu() {
+    public func disableSlidePanGestureForLeftMenu() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.rightPanDisabled = true
     }
     
-    func disableSlidePanGestureForRightMenu() {
+    public func disableSlidePanGestureForRightMenu() {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.leftPanDisabled = true
     }
     
-    func my_viewWillDisappear(_ animated: Bool) {
+    public func my_viewWillDisappear(_ animated: Bool) {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.leftPanDisabled = false
         mainVC?.rightPanDisabled = false
