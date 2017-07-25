@@ -667,6 +667,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuSwift/SlideMenuSwift-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Target Support Files/SlideMenuSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -674,6 +675,7 @@
 				MODULEMAP_FILE = "Target Support Files/SlideMenuSwift/SlideMenuSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_NAME = SlideMenuSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -703,6 +705,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuSwift/SlideMenuSwift-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Target Support Files/SlideMenuSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -710,6 +713,7 @@
 				MODULEMAP_FILE = "Target Support Files/SlideMenuSwift/SlideMenuSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_NAME = SlideMenuSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
