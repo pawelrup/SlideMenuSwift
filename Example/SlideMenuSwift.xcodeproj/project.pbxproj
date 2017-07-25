@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6A160142BDB67D90C6477A6A /* Pods_SlideMenuSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5A278AED3B2055DD96FC16 /* Pods_SlideMenuSwift_Tests.framework */; };
 		88478E8FA12212A1E882D6E5 /* Pods_SlideMenuSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC01100E8D6173DB642A238B /* Pods_SlideMenuSwift_Example.framework */; };
+		BA7DECBC1F27E38F00AA8448 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DECB81F27E38F00AA8448 /* LeftMenuViewController.swift */; };
+		BA7DECBD1F27E38F00AA8448 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DECB91F27E38F00AA8448 /* MainViewController.swift */; };
+		BA7DECBE1F27E38F00AA8448 /* PushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DECBA1F27E38F00AA8448 /* PushedViewController.swift */; };
+		BA7DECBF1F27E38F00AA8448 /* RightMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7DECBB1F27E38F00AA8448 /* RightMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,6 @@
 		607FACD01AFB9204008FA782 /* SlideMenuSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenuSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -45,6 +47,10 @@
 		900691DAE725BDD86749C95E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9C5A278AED3B2055DD96FC16 /* Pods_SlideMenuSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6CC83FD924EDDB0D1FE2B2 /* SlideMenuSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SlideMenuSwift.podspec; path = ../SlideMenuSwift.podspec; sourceTree = "<group>"; };
+		BA7DECB81F27E38F00AA8448 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		BA7DECB91F27E38F00AA8448 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BA7DECBA1F27E38F00AA8448 /* PushedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushedViewController.swift; sourceTree = "<group>"; };
+		BA7DECBB1F27E38F00AA8448 /* RightMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuViewController.swift; sourceTree = "<group>"; };
 		BC01100E8D6173DB642A238B /* Pods_SlideMenuSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1F0CD82F17473FD6A56556 /* Pods-SlideMenuSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenuSwift_Tests/Pods-SlideMenuSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				BA7DECB81F27E38F00AA8448 /* LeftMenuViewController.swift */,
+				BA7DECB91F27E38F00AA8448 /* MainViewController.swift */,
+				BA7DECBA1F27E38F00AA8448 /* PushedViewController.swift */,
+				BA7DECBB1F27E38F00AA8448 /* RightMenuViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -361,8 +370,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				BA7DECBD1F27E38F00AA8448 /* MainViewController.swift in Sources */,
+				BA7DECBE1F27E38F00AA8448 /* PushedViewController.swift in Sources */,
+				BA7DECBC1F27E38F00AA8448 /* LeftMenuViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BA7DECBF1F27E38F00AA8448 /* RightMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideMenuSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -509,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideMenuSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

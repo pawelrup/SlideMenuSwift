@@ -44,7 +44,7 @@ extension UIViewController {
         let navItem = self.navigationItem
         let rightBtn = mainVC?.configureRightMenuButton() ?? UIButton(type: .custom) //TODO: Animated hamburger button as default
         rightBtn.addTarget(mainVC, action: #selector(SlideMenuMainViewController.openRightMenuSelector), for: .touchUpInside)
-        navItem.leftBarButtonItem = UIBarButtonItem(customView: rightBtn)
+        navItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
     }
     
     public func removeLeftMenuButton() {

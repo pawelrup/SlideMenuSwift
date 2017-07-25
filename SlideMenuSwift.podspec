@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlideMenuSwift'
-  s.version          = '0.1.12'
+  s.version          = '0.1.13'
   s.summary          = 'SlideMenu is a Swift framework for hamburger menu.'
 
 # This description is used to generate tags and improve search results.
