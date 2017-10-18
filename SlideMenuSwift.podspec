@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlideMenuSwift'
-  s.version          = '0.1.13'
+  s.version          = '0.1.14'
   s.summary          = 'SlideMenu is a Swift framework for hamburger menu.'
 
 # This description is used to generate tags and improve search results.
@@ -32,8 +32,8 @@ Based on AMSlideMenu with some improvements.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SlideMenuSwift/Classes/**/*'
-  s.pod_target_xcconfig =  {
-    'SWIFT_VERSION' => '3.0',
+  s.pod_target_xcconfig = {
+    'SWIFT_VERSION' => '4.0',
   }
 
   # s.resource_bundles = {

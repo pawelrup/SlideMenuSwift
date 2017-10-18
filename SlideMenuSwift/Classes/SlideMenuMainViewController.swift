@@ -364,7 +364,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
     }
     
     public func openLeftMenu(animated: Bool) {
-        self.slideMenuDelegate?.leftMenuWillOpen()
+        self.slideMenuDelegate?.leftMenuWillOpen?()
         if self.darknessView == nil {
             self.configureDarknessView()
         }
@@ -390,7 +390,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
             self.enableGestures()
             self.menuState = .leftOpened
             
-            self.slideMenuDelegate?.leftMenuDidOpen()
+            self.slideMenuDelegate?.leftMenuDidOpen?()
         })
     }
     
@@ -399,7 +399,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
     }
     
     public func openRightMenu(animated: Bool) {
-        self.slideMenuDelegate?.rightMenuWillOpen()
+        self.slideMenuDelegate?.rightMenuWillOpen?()
         if self.darknessView == nil {
             self.configureDarknessView()
         }
@@ -425,7 +425,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
             self.enableGestures()
             self.menuState = .rightOpened
             
-            self.slideMenuDelegate?.rightMenuDidOpen()
+            self.slideMenuDelegate?.rightMenuDidOpen?()
         })
     }
     
@@ -434,7 +434,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
     }
     
     public func closeLeftMenu(animated: Bool) {
-        self.slideMenuDelegate?.leftMenuWillClose()
+        self.slideMenuDelegate?.leftMenuWillClose?()
         var frame = self.currentActiveNVC?.view.frame ?? .zero
         frame.origin.x = 0
         
@@ -453,7 +453,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
             self.desableGestures()
             self.menuState = .closed
             self.currentActiveNVC?.view.addGestureRecognizer(self.panGesture)
-            self.slideMenuDelegate?.leftMenuDidClose()
+            self.slideMenuDelegate?.leftMenuDidClose?()
         })
     }
     
@@ -462,7 +462,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
     }
     
     public func closeRightMenu(animated: Bool) {
-        self.slideMenuDelegate?.rightMenuWillClose()
+        self.slideMenuDelegate?.rightMenuWillClose?()
         var frame = self.currentActiveNVC?.view.frame ?? .zero
         frame.origin.x = 0
         
@@ -481,7 +481,7 @@ open class SlideMenuMainViewController: UIViewController, SlideMenuMultipleStory
             self.desableGestures()
             self.menuState = .closed
             self.currentActiveNVC?.view.addGestureRecognizer(self.panGesture)
-            self.slideMenuDelegate?.rightMenuDidClose()
+            self.slideMenuDelegate?.rightMenuDidClose?()
         })
     }
     

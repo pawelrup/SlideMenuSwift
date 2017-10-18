@@ -26,7 +26,7 @@ extension UIViewController {
     private static func swizzle(originalSelector: Selector, toSelector swizzleSelector: Selector) {
         let originalMethod = class_getInstanceMethod(self, originalSelector)
         let newMethod = class_getInstanceMethod(self, swizzleSelector)
-        method_exchangeImplementations(originalMethod, newMethod)
+        method_exchangeImplementations(originalMethod!, newMethod!)
     }
     
     // MARK: -
@@ -77,7 +77,7 @@ extension UIViewController {
         mainVC?.leftPanDisabled = true
     }
     
-    public func my_viewWillDisappear(_ animated: Bool) {
+    @objc public func my_viewWillDisappear(_ animated: Bool) {
         let mainVC = SlideMenuMainViewController.getInstance(for: self)
         mainVC?.leftPanDisabled = false
         mainVC?.rightPanDisabled = false

@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol SlideMenuDelegate: class {
-    func leftMenuWillOpen()
-    func leftMenuDidOpen()
-    func rightMenuWillOpen()
-    func rightMenuDidOpen()
-    func leftMenuWillClose()
-    func leftMenuDidClose()
-    func rightMenuWillClose()
-    func rightMenuDidClose()
+@objc public protocol SlideMenuDelegate: class {
+    @objc optional func leftMenuWillOpen()
+    @objc optional func leftMenuDidOpen()
+    @objc optional func rightMenuWillOpen()
+    @objc optional func rightMenuDidOpen()
+    @objc optional func leftMenuWillClose()
+    @objc optional func leftMenuDidClose()
+    @objc optional func rightMenuWillClose()
+    @objc optional func rightMenuDidClose()
 }

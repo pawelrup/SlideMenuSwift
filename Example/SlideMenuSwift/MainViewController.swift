@@ -10,6 +10,13 @@ import UIKit
 import SlideMenuSwift
 
 class MainViewController: SlideMenuMainViewController {
+    
+    lazy var menuButton: SlideMenuHamburgerButton = {
+        let button = SlideMenuHamburgerButton(frame: CGRect(origin: .zero, size: CGSize(width: 25, height: 13)))
+        button.backgroundColor = .clear
+        button.lineColor = .lightGray
+        return button
+    }()
 
     // MARK: - Overriden Methods
     
@@ -56,12 +63,13 @@ class MainViewController: SlideMenuMainViewController {
     }
     
     override func configureLeftMenuButton() -> UIButton? {
-        let button = UIButton(type: .custom)
-        let frame = CGRect(origin: .zero, size: CGSize(width: 25, height: 13))
-        button.frame = frame
-        button.backgroundColor = .clear
-        button.setImage(UIImage(named: "simpleMenuButton"), for: .normal)
-        return button
+//        let button = UIButton(type: .custom)
+//        let frame = CGRect(origin: .zero, size: CGSize(width: 25, height: 13))
+//        button.frame = frame
+//        button.backgroundColor = .clear
+//        button.setImage(UIImage(named: "simpleMenuButton"), for: .normal)
+        
+        return self.menuButton
     }
     
     override func configureRightMenuButton() -> UIButton? {
@@ -108,5 +116,16 @@ class MainViewController: SlideMenuMainViewController {
     
     override var maxDarknessWhileRightMenu: CGFloat {
         return 0.5
+    }
+}
+
+// MARK: - SlideMenuDelegate
+extension MainViewController: SlideMenuDelegate {
+    func leftMenuWillOpen() {
+        self.menuButton.set(currentMode: .arrow)
+    }
+    
+    func leftMenuWillClose() {
+        self.menuButton.set(currentMode: .hambuger)
     }
 }

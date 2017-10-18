@@ -9,6 +9,12 @@
 import UIKit
 
 open class SlideMenuContentSegue: UIStoryboardSegue {
+    
+    fileprivate var menuButton: SlideMenuHamburgerButton = {
+        let button = SlideMenuHamburgerButton(frame: CGRect(origin: .zero, size: CGSize(width: 25, height: 13)))
+        button.backgroundColor = .clear
+        return button
+    }()
 
     override open func perform() {
         let sourceVC = self.source as! UITableViewController
@@ -54,5 +60,16 @@ open class SlideMenuContentSegue: UIStoryboardSegue {
             mainVC.configure(slideLayer: destinationNVC.view.layer)
         }
         mainVC.switchCurrentActiveController(to: destinationNVC, from: sourceVC)
+    }
+}
+
+// MARK: - SlideMenuDelegate
+extension SlideMenuContentSegue: SlideMenuDelegate {
+    public func leftMenuWillOpen() {
+        self.menuButton.set(currentMode: .arrow)
+    }
+    
+    public func leftMenuWillClose() {
+        self.menuButton.set(currentMode: .hambuger)
     }
 }
