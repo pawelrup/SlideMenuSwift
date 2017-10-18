@@ -1,9 +1,8 @@
 //
 //  SlideMenuHamburgerButton.swift
-//  Pods
 //
-//  Created by Pawel Rup on 26.07.2017.
-//
+//  Created by Paweł Rup on 26.07.2017.
+//  Copyright © 2017 lobocode. All rights reserved.
 //
 
 import UIKit

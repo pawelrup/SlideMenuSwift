@@ -1,9 +1,8 @@
 //
 //  UIViewController+SideMenu.swift
-//  SideMenu
 //
-//  Created by Pawel Rup on 22.07.2017.
-//  Copyright © 2017 Pawel Rup. All rights reserved.
+//  Created by Paweł Rup on 22.07.2017.
+//  Copyright © 2017 lobocode. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  SlideMenuSwift
 //
-//  Created by RupeQ on 07/25/2017.
-//  Copyright (c) 2017 RupeQ. All rights reserved.
+//  Created by Paweł Rup on 25.07.2017.
+//  Copyright © 2017 lobocode. All rights reserved.
 //
 
 import UIKit
