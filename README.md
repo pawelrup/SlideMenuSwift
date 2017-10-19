@@ -13,6 +13,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Xcode 9, Swift 4.0
+
 ## Installation
 
 SlideMenuSwift is available through [CocoaPods](http://cocoapods.org). To install
@@ -24,7 +26,7 @@ pod "SlideMenuSwift"
 
 ## Author
 
-lobocode, rupeqdj@gmail.com
+lobocode, pawelrup@lobocode.pl
 
 ## License
 
