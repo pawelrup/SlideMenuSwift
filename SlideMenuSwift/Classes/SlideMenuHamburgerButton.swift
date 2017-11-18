@@ -23,8 +23,8 @@ public class SlideMenuHamburgerButton: UIButton {
     private var bottomLayer: CAShapeLayer!
     private var lastBounds: CGRect!
 
-    public var lineHeight: CGFloat = 1.5
-    public var lineWidth: CGFloat = 24
+    public var lineHeight: CGFloat = 4
+    public var lineWidth: CGFloat = 1.5
     public var lineSpacing: CGFloat = 3.5
     public var lineColor: UIColor = .white
     public var animationDuration: CFTimeInterval = 0.3

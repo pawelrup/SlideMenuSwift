@@ -27,7 +27,7 @@ open class SlideMenuLeftTableViewController: UITableViewController {
             let segue = SlideMenuContentSegue(identifier: "ContentSugue", source: self, destination: navigationController)
             segue.perform()
         } else {
-            if let segueIdentifier = self.mainVC.segueIdentifierInLeftMenu(forIndexPath: indexPath), segueIdentifier.characters.count > 0 {
+            if let segueIdentifier = self.mainVC.segueIdentifierInLeftMenu(forIndexPath: indexPath), segueIdentifier.count > 0 {
                 self.performSegue(withIdentifier: segueIdentifier, sender: self)
             }
         }
