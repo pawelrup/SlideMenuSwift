@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlideMenuSwift'
-  s.version          = '0.1.16'
+  s.version          = '0.1.17'
   s.summary          = 'SlideMenu is a Swift framework for hamburger menu.'
 
 # This description is used to generate tags and improve search results.
@@ -22,11 +22,11 @@ SlideMenu is a Swift framework for hamburger menu.
 Based on AMSlideMenu with some improvements.
                        DESC
   s.requires_arc = true
-  s.homepage         = 'https://github.com/RupeQ/SlideMenuSwift'
+  s.homepage         = 'https://github.com/pawelrup/SlideMenuSwift'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lobocode' => 'rupeqdj@gmail.com' }
-  s.source           = { :git => 'https://github.com/RupeQ/SlideMenuSwift.git', :tag => s.version.to_s }
+  s.author           = { 'Paweł Rup' => 'pawelrup@lobocode.pl' }
+  s.source           = { :git => 'https://github.com/pawelrup/SlideMenuSwift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
